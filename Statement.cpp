@@ -1,4 +1,5 @@
 #include <sstream>
+#include <iostream>
 #include <vector>
 #include "Statement.h"
 #include "Rental.h"
@@ -46,3 +47,4 @@ void StatementText::Print(const std::string& name, const std::vector< Rental >& 
 
 	std::cout << result.str() << std::endl;
 }
+

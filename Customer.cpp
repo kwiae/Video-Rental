@@ -25,18 +25,8 @@ std::string Customer::GetName() const
 
 void Customer::PrintStatement(STATEMENT_TYPE type)
 {
-    std::unique_ptr<Statement> statement;
-    switch (type)
-    {
-    case STATEMENT_TYPE::TEXT :
-      statement = std::make_unique<StatementText>();
-    break;
-    default:
-        statement = std::make_unique<StatementText>();
-        break;
+	std::unique_ptr<Statement> statement = StatementFactory::Create(type);
 
-    }
-
-    if(statement)
-        statement->Print(GetName(), customerRentals);
+	if (statement)
+		statement->Print(GetName(), customerRentals);
 }
