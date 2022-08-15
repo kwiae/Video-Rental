@@ -9,9 +9,12 @@ class Movie {
 public:
   Movie( const std::string& title, PRICE_CODE priceCode = PRICE_CODE::REGULAR );
 
-  PRICE_CODE getPriceCode() const;
-  void setPriceCode(PRICE_CODE arg );
-  std::string getTitle() const;
+  double GetRentalFee(int daysRented) const;
+  int GetRentalPoint(int daysRented) const;
+
+  PRICE_CODE GetPriceCode() const;
+  void SetPriceCode(PRICE_CODE arg );
+  std::string GetTitle() const;
 
 private:
   std::string title;

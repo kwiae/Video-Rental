@@ -149,10 +149,20 @@
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Movie.cpp" />
+    <ClCompile Include="Price.cpp" />
+    <ClCompile Include="PriceChildrens.cpp" />
+    <ClCompile Include="PriceNewRelease.cpp" />
+    <ClCompile Include="PriceRegular.cpp" />
+    <ClCompile Include="Rental.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Movie.h" />
+    <ClInclude Include="Price.h" />
+    <ClInclude Include="PriceChildrens.h" />
+    <ClInclude Include="PriceFactory.h" />
+    <ClInclude Include="PriceNewRelease.h" />
+    <ClInclude Include="PriceRegular.h" />
     <ClInclude Include="Rental.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

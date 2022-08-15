@@ -18,7 +18,7 @@ public:
 		case PRICE_CODE::CHILDRENS:
 			return std::make_shared<PriceChildrens>(code);
 		default:
-			return nullptr;
+			return std::make_shared<PriceRegular>(code);
 		}
 	}
 };

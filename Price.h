@@ -1,7 +1,7 @@
 #pragma once
 
 enum class PRICE_CODE {
-	REGULAR = 0, NEW_RELEASE, CHILDRENS
+	UNKNOWN = -1, REGULAR = 0, NEW_RELEASE, CHILDRENS
 };
 
 class Price {

@@ -5,20 +5,39 @@
 Movie::Movie(const std::string& title, PRICE_CODE code)
 	:title(title)
 {
-	setPriceCode(code);
+	SetPriceCode(code);
 }
 
-PRICE_CODE Movie::getPriceCode() const
+PRICE_CODE Movie::GetPriceCode() const
 { 
+	if (!price)
+		return PRICE_CODE::UNKNOWN;
+
 	return price->GetCode();
 }
 
-void Movie::setPriceCode(PRICE_CODE code)
+void Movie::SetPriceCode(PRICE_CODE code)
 { 
 	price = PriceFactory::Create(code);
 }
 
- std::string Movie::getTitle() const
+ std::string Movie::GetTitle() const
  { 
 	 return title; 
+ }
+
+
+ double Movie::GetRentalFee(int daysRented) const
+ {
+	 if (!price)
+		 return 0.0;
+
+	 return price->GetRentalFee(daysRented);
+ }
+ int Movie::GetRentalPoint(int daysRented) const
+ {
+	 if (!price)
+		 return 0;
+
+	 return price->GetRentalPoint(daysRented);
  }

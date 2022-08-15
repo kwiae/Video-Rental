@@ -8,10 +8,17 @@ PriceRegular::PriceRegular(PRICE_CODE code)
 
 double PriceRegular::GetRentalFee(int daysRented)
 {
-	return 0.0;
+	double fee = baseFee;
+
+	if (daysRented > 2)
+		fee += (daysRented - 2) * 1.5;
+
+	return fee;
 }
 
 int PriceRegular::GetRentalPoint(int daysRented)
 {
-	return 0;
+	int point = 1;
+
+	return point;
 }

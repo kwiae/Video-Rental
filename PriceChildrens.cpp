@@ -8,10 +8,17 @@ PriceChildrens::PriceChildrens(PRICE_CODE code)
 
 double PriceChildrens::GetRentalFee(int daysRented)
 {
-	return 0.0;
+	double fee = baseFee;
+
+	if (daysRented > 3)
+		fee += (daysRented - 3) * 1.5;
+
+	return fee;
 }
 
 int PriceChildrens::GetRentalPoint(int daysRented)
 {
-	return 0;
+	int point = 1;
+
+	return point;
 }
