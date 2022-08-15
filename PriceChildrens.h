@@ -3,7 +3,7 @@
 
 class PriceChildrens : public Price {
 public:
-	PriceChildrens(PRICE_CODE code = PRICE_CODE::REGULAR);
+	PriceChildrens(PRICE_CODE code = PRICE_CODE::CHILDRENS);
 
 	virtual double GetRentalFee(int daysRented) override;
 	virtual int GetRentalPoint(int daysRented) override;

@@ -13,15 +13,15 @@ public:
 		switch (code)
 		{
 		case PRICE_CODE::REGULAR:
-			return std::make_shared<PriceRegular>(code);
+			return std::make_shared<PriceRegular>();
 		case PRICE_CODE::NEW_RELEASE:
-			return std::make_shared<PriceNewRelease>(code);
+			return std::make_shared<PriceNewRelease>();
 		case PRICE_CODE::CHILDRENS:
-			return std::make_shared<PriceChildrens>(code);
+			return std::make_shared<PriceChildrens>();
 		case PRICE_CODE::EXAMPLE_GENRE:
-			return std::make_shared<PriceExampleGenre>(code);
+			return std::make_shared<PriceExampleGenre>();
 		default:
-			return std::make_shared<PriceRegular>(code);
+			return std::make_shared<PriceRegular>();
 		}
 	}
 };
