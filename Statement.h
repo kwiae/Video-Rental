@@ -21,8 +21,14 @@ public:
 	virtual void Print(const std::string& name, const std::vector< Rental >& customerRentals) override;
 };
 
-class StatementFactory
-{
+class StatementJSON : public Statement {
+public:
+	StatementJSON() : Statement() {}
+
+	virtual void Print(const std::string& name, const std::vector< Rental >& customerRentals) override;
+};
+
+class StatementFactory {
 public:
 	static std::unique_ptr<Statement> Create(STATEMENT_TYPE type)
 	{
@@ -30,6 +36,8 @@ public:
 		{
 		case STATEMENT_TYPE::TEXT:
 			return  std::make_unique<StatementText>();
+		case STATEMENT_TYPE::JSON:
+			return  std::make_unique<StatementJSON>();
 		default:
 			return std::make_unique<StatementText>();
 		}

@@ -48,3 +48,39 @@ void StatementText::Print(const std::string& name, const std::vector< Rental >& 
 	std::cout << result.str() << std::endl;
 }
 
+void StatementJSON::Print(const std::string& name, const std::vector< Rental >& customerRentals)
+{
+	// result will be returned by Statement()
+	std::ostringstream result;
+	result << "{" << "\n";
+	result << "\"name\": " << "\"" << name << "\"," << "\n";
+
+	result << "\"rentals\": [" << "\n";
+
+	bool bFirst = true;
+	// Loop over customer's rentals
+	for (auto each : customerRentals)
+	{
+		if (bFirst)
+		{
+			result << "{" << "\n";
+			bFirst = false;
+		}
+		else
+		{
+			result << ",\n{" << "\n";
+		}
+
+		result << "\"title\": " << "\"" << each.GetMovieTitle() << "\"," << "\n";
+		result << "\"fee\": " << "\"" << each.GetFee() << "\"" << "\n";
+		result << "}";
+	}
+	result << "\n" << "]," << "\n";
+
+	// Add footer lines
+	result << "\"amount\": " << "\"" << GetTotalAmount(customerRentals) << "\"," << "\n";
+	result << "\"points\": " << "\"" << GetFrequentRenterPoints(customerRentals) << "\"" << "\n";
+	result << "}" << "\n";
+
+	std::cout << result.str() << std::endl;
+}

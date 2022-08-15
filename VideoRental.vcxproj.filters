@@ -78,7 +78,7 @@
       <Filter>Price</Filter>
     </ClInclude>
     <ClInclude Include="Statement.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

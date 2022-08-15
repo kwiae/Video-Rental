@@ -26,6 +26,7 @@ int main()
     customer.AddRental({ example1, 5 });
 
    customer.PrintStatement();
+   customer.PrintStatement(STATEMENT_TYPE::JSON);
 
     return 0;
 }
