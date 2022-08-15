@@ -1,51 +1,42 @@
 // Customer.cc
 #include <sstream>
+#include <iostream>
 #include <vector>
 #include "Customer.h"
+#include "Statement.h"
 
 using std::ostringstream;
 using std::vector;
 
-std::string Customer::Statement()
+Customer::Customer(const std::string& name) :
+    customerName(name) 
 {
-  // result will be returned by Statement()
-  std::ostringstream result;
-  result << "Rental Record for " << GetName() << "\n";
-
-  // Loop over customer's rentals
-  for (auto each : customerRentals)
-  {
-	  // Show figures for this rental
-	  result << "\t" << each.GetMovieTitle() << "\t"
-		  << each.GetFee() << std::endl;
-  }
-
-  // Add footer lines
-  result << "Amount owed is " << GetTotalAmount() << "\n";
-  result << "You earned " << GetFrequentRenterPoints()
-	  << " frequent renter points";
-
-  return result.str();
 }
 
-double Customer::GetTotalAmount()
-{
-    int totalAmount = 0;
-    for (auto iter : customerRentals)
-    {
-        totalAmount += iter.GetFee();
-    }
-
-    return totalAmount;
+void Customer::AddRental(const Rental& arg) 
+{ 
+    customerRentals.push_back(arg);
 }
 
-int Customer::GetFrequentRenterPoints()
+std::string Customer::GetName() const 
+{ 
+    return customerName; 
+}
+
+void Customer::PrintStatement(STATEMENT_TYPE type)
 {
-    int frequentRenterPoints = 0;
-    for (auto iter : customerRentals)
+    std::unique_ptr<Statement> statement;
+    switch (type)
     {
-        frequentRenterPoints += iter.GetPoint();
+    case STATEMENT_TYPE::TEXT :
+      statement = std::make_unique<StatementText>();
+    break;
+    default:
+        statement = std::make_unique<StatementText>();
+        break;
+
     }
 
-    return frequentRenterPoints;
+    if(statement)
+        statement->Print(GetName(), customerRentals);
 }

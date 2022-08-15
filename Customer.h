@@ -5,38 +5,23 @@
 #include <string>
 #include <vector>
 #include "Rental.h"
-
+#include "Statement.h"
 // The customer class represents the customer of the store
 
 class Customer {
 public:
-  Customer();
-  explicit Customer( const std::string& name );
+	Customer() {};
+	explicit Customer(const std::string& name);
 
-  void AddRental( const Rental& arg );
-  std::string GetName() const;
+	void AddRental(const Rental& arg);
+	std::string GetName() const;
 
-  // Generate a Statement for the customer
-  std::string Statement();
-
-private:
-	double GetTotalAmount();
-	int GetFrequentRenterPoints();
+	// Generate a Statement for the customer
+	void PrintStatement(STATEMENT_TYPE type = STATEMENT_TYPE::TEXT);
 
 private:
-  std::string customerName;
-  std::vector< Rental > customerRentals;
+	std::string customerName;
+	std::vector< Rental > customerRentals;
 
 };
-
-
-inline Customer::Customer() {}
-
-inline Customer::Customer( const std::string& name ): 
-  customerName( name ) {}
-
-inline void Customer::AddRental( const Rental& arg ) { customerRentals.push_back( arg ); }
-
-inline std::string Customer::GetName() const { return customerName; }
-
 #endif // CUSTOMER_HH

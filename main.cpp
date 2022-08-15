@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Customer.h"
 #include "Movie.h"
+#include "Statement.h"
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int main()
     customer.AddRental({ children2, 4 });
     customer.AddRental({ example1, 5 });
 
-    cout << customer.Statement() << endl;
+   customer.PrintStatement();
 
     return 0;
 }

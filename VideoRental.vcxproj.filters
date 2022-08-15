@@ -45,6 +45,9 @@
     <ClCompile Include="PriceExampleGenre.cpp">
       <Filter>Price</Filter>
     </ClCompile>
+    <ClCompile Include="Statement.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rental.h">
@@ -73,6 +76,9 @@
     </ClInclude>
     <ClInclude Include="PriceExampleGenre.h">
       <Filter>Price</Filter>
+    </ClInclude>
+    <ClInclude Include="Statement.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
