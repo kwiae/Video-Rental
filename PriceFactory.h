@@ -4,6 +4,7 @@
 #include "PriceNewRelease.h"
 #include "PriceRegular.h"
 #include "PriceChildrens.h"
+#include "PriceExampleGenre.h"
 
 class PriceFactory {
 public:
@@ -17,6 +18,8 @@ public:
 			return std::make_shared<PriceNewRelease>(code);
 		case PRICE_CODE::CHILDRENS:
 			return std::make_shared<PriceChildrens>(code);
+		case PRICE_CODE::EXAMPLE_GENRE:
+			return std::make_shared<PriceExampleGenre>(code);
 		default:
 			return std::make_shared<PriceRegular>(code);
 		}

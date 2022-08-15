@@ -151,6 +151,7 @@
     <ClCompile Include="Movie.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="PriceChildrens.cpp" />
+    <ClCompile Include="PriceExampleGenre.cpp" />
     <ClCompile Include="PriceNewRelease.cpp" />
     <ClCompile Include="PriceRegular.cpp" />
     <ClCompile Include="Rental.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Movie.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="PriceChildrens.h" />
+    <ClInclude Include="PriceExampleGenre.h" />
     <ClInclude Include="PriceFactory.h" />
     <ClInclude Include="PriceNewRelease.h" />
     <ClInclude Include="PriceRegular.h" />
