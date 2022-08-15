@@ -16,15 +16,15 @@ int main()
 
     Customer customer{ "°í°´" };
 
-    customer.addRental({ regular1, 2 });
-    customer.addRental({ regular2, 3 });
-    customer.addRental({ newRelease1, 1 });
-    customer.addRental({ newRelease2, 2 });
-    customer.addRental({ children1, 3 });
-    customer.addRental({ children2, 4 });
-    customer.addRental({ example1, 5 });
+    customer.AddRental({ regular1, 2 });
+    customer.AddRental({ regular2, 3 });
+    customer.AddRental({ newRelease1, 1 });
+    customer.AddRental({ newRelease2, 2 });
+    customer.AddRental({ children1, 3 });
+    customer.AddRental({ children2, 4 });
+    customer.AddRental({ example1, 5 });
 
-    cout << customer.statement() << endl;
+    cout << customer.Statement() << endl;
 
     return 0;
 }
