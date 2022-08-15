@@ -1,7 +1,7 @@
 #include "PriceChildrens.h"
 
-PriceChildrens::PriceChildrens(PRICE_CODE code)
-	:Price(code)
+PriceChildrens::PriceChildrens()
+	:Price(PRICE_CODE::CHILDRENS)
 {
 
 }

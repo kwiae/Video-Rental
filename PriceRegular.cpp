@@ -1,7 +1,7 @@
 #include "PriceRegular.h"
 
-PriceRegular::PriceRegular(PRICE_CODE code)
-	:Price(code)
+PriceRegular::PriceRegular()
+	:Price(PRICE_CODE::REGULAR)
 {
 
 }

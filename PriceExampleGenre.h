@@ -3,7 +3,7 @@
 
 class PriceExampleGenre : public Price {
 public:
-	PriceExampleGenre(PRICE_CODE code = PRICE_CODE::EXAMPLE_GENRE);
+	PriceExampleGenre();
 
 	virtual double GetRentalFee(int daysRented) override;
 	virtual int GetRentalPoint(int daysRented) override;

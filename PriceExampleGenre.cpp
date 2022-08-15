@@ -1,7 +1,7 @@
 #include "PriceExampleGenre.h"
 
-PriceExampleGenre::PriceExampleGenre(PRICE_CODE code)
-	:Price(code)
+PriceExampleGenre::PriceExampleGenre()
+	:Price(PRICE_CODE::EXAMPLE_GENRE)
 {
 
 }

@@ -1,7 +1,7 @@
 #include "PriceNewRelease.h"
 
-PriceNewRelease::PriceNewRelease(PRICE_CODE code)
-	:Price(code)
+PriceNewRelease::PriceNewRelease()
+	:Price(PRICE_CODE::NEW_RELEASE)
 {
 
 }
