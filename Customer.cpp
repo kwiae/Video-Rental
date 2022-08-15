@@ -31,7 +31,7 @@ std::string Customer::statement()
     frequentRenterPoints += each.GetPoint();
 
     // Show figures for this rental
-    result << "\t" << each.GetMovie().GetTitle() << "\t"
+    result << "\t" << each.GetMovieTitle() << "\t"
            << thisAmount << std::endl;
     totalAmount += thisAmount;
   }

@@ -30,9 +30,6 @@
     <ClCompile Include="Rental.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Price.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PriceRegular.cpp">
       <Filter>Price</Filter>
     </ClCompile>
@@ -40,6 +37,9 @@
       <Filter>Price</Filter>
     </ClCompile>
     <ClCompile Include="PriceNewRelease.cpp">
+      <Filter>Price</Filter>
+    </ClCompile>
+    <ClCompile Include="Price.cpp">
       <Filter>Price</Filter>
     </ClCompile>
   </ItemGroup>

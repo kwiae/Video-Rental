@@ -7,12 +7,12 @@ class Rental {
 public:
   Rental( const Movie& movie, int daysRented );
 
-  int GetDaysRented() const;
-  const Movie& GetMovie() const;
   double GetFee() const;
-  int Rental::GetPoint() const;
+  int GetPoint() const;
+  std::string GetMovieTitle() const;
 
 private:
+	int GetDaysRented() const;
 
 private:
   Movie rentedMovie;

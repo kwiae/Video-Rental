@@ -11,18 +11,18 @@ int Rental::GetDaysRented() const
 	return nDaysRented; 
 }
 
-const Movie& Rental::GetMovie() const 
-{ 
-	return rentedMovie; 
-}
-
 double Rental::GetFee() const
 {
-    return rentedMovie.GetRentalFee(nDaysRented);
+    return rentedMovie.GetRentalFee(GetDaysRented());
 }
 
 int Rental::GetPoint() const
 {
-	return rentedMovie.GetRentalPoint(nDaysRented);
+	return rentedMovie.GetRentalPoint(GetDaysRented());
+}
+
+std::string Rental::GetMovieTitle() const
+{
+	return rentedMovie.GetTitle();
 }
 

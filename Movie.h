@@ -12,9 +12,10 @@ public:
   double GetRentalFee(int daysRented) const;
   int GetRentalPoint(int daysRented) const;
 
-  PRICE_CODE GetPriceCode() const;
-  void SetPriceCode(PRICE_CODE arg );
   std::string GetTitle() const;
+
+private:
+  void SetPriceCode(PRICE_CODE arg );
 
 private:
   std::string title;
