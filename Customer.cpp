@@ -1,15 +1,13 @@
 // Customer.cc
-#include <sstream>
 #include <iostream>
-#include <vector>
 #include "Customer.h"
 #include "Statement.h"
 
 using std::ostringstream;
 using std::vector;
 
-Customer::Customer(const std::string& name) :
-    customerName(name) 
+Customer::Customer(const std::string& name) 
+	:customerName(name) 
 {
 }
 
