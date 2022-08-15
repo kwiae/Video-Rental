@@ -2,6 +2,7 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
+#include <iostream>
 #include "Price.h"
 
 class Movie {
@@ -14,7 +15,7 @@ public:
 
 private:
   std::string title;
-  Price price;
+  std::shared_ptr<Price> price;
 };
 
 

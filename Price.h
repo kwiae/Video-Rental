@@ -6,10 +6,10 @@ enum class PRICE_CODE {
 
 class Price {
 public:
-	Price(PRICE_CODE genre = PRICE_CODE::REGULAR);
+	Price(PRICE_CODE code = PRICE_CODE::REGULAR);
 
-	//virtual double GetRentalFee(int daysRented) = 0;
-	//virtual int GetRentalPoint(int daysRented) = 0;
+	virtual double GetRentalFee(int daysRented) = 0;
+	virtual int GetRentalPoint(int daysRented) = 0;
 
 	PRICE_CODE GetCode() const { return code; }
 
